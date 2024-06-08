@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe | Menu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/normalize.css">
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+  <div id="root" class="wrapper">
+    <main class="main">
+      <div class="main__background">
+        <div class="main__background-x"></div>
+        <div class="main__background-o"></div>
+      </div>
+      <div class="container">
+        <div class="main__content main__content--menu-page">
+          <button id="back-button" class="main__back-button button">Back</button>
+          <h1 class="main__title">Tic-Tac-Toe</h1>
+          <div class="main__start-menu main__start-menu--visible">
+            <button id="load-game-button" class="main__load-game-button button">Load Game</button>
+            <button id="new-game-button" class="main__new-game-button button">New Game</button>
+          </div>
+          <div class="main__new-game-menu">
+            <div class="main__new-game-menu-top">
+              <button id="one-player-button" class="main__one-player-button button">1 Player</button>
+              <button id="two-players-button" class="main__two-players-button button">2 Players</button>
+            </div>
+            <div class="main__new-game-menu-bottom">
+              <button id="game-mode-button" class="main__game-mode-button button">Normal</button>
+              <button disabled id="ok-button" class="main__ok-button main__ok-button--disabled button">OK</button>
+            </div>
+          </div>
+          <div class="main__first-turn-menu">
+            <p class="main__first-turn-text">Pick who goes first?</p>
+            <div class="main__first-turn-buttons">
+              <button id="first-turn-button-x" class="main__first-turn-button-x button"></button>
+              <button id="first-turn-button-o" class="main__first-turn-button-o button"></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="./scripts/index.js"></script>
+</body>
+</html>
