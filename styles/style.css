@@ -109,6 +109,7 @@ body {
   box-shadow: 4px 4px 14px var(--color-shadow-2);
   cursor: pointer;
   transition: opacity 0.3s;
+  user-select: none;
 }
 
 .button:hover {
@@ -136,6 +137,7 @@ body {
   padding-bottom: 39px;
   margin: auto 0;
   text-shadow: 2px 2px 8px var(--color-shadow-1);
+  user-select: none;
 }
 
 .main__start-menu {
@@ -255,11 +257,29 @@ body {
   background: url(../assets/img/first-turn-o.svg) center / 91px no-repeat var(--color-main);
 }
 
+.main__game-info {
+  user-select: none;
+}
+
 .main__game-info-top {
   display: flex;
   justify-content: space-evenly;
   column-gap: 10px;
   margin-bottom: 23px;
+}
+
+.main__timer {
+  width: 149px;
+  border-radius: 28px;
+  background-color: var(--color-main);
+  padding: 7px 7px 7px 38px;
+  box-shadow: 4px 4px 14px var(--color-shadow-2);
+}
+
+.main__timer-time {
+  display: block;
+  font-size: 34px;
+  color: var(--color-black);
 }
 
 .main__stats {
@@ -282,20 +302,6 @@ body {
 .stats__value {
   font-size: 20px;
   border-right: 2px solid white;
-}
-
-.main__timer {
-  width: 149px;
-  border-radius: 28px;
-  background-color: var(--color-main);
-  padding: 7px 7px 7px 38px;
-  box-shadow: 4px 4px 14px var(--color-shadow-2);
-}
-
-.main__timer-time {
-  display: block;
-  font-size: 34px;
-  color: var(--color-black);
 }
 
 .main__turn-text {
@@ -551,16 +557,6 @@ body {
     margin-bottom: 28px;
   }
   
-  .stats__name {
-    font-size: 20px;
-    padding: 8px 13px;
-  }
-  
-  .stats__value {
-    font-size: 24px;
-    padding: 5px;
-  }
-  
   .main__timer {
     width: 200px;
     border-radius: 42px;
@@ -569,6 +565,16 @@ body {
   
   .main__timer-time {
     font-size: 44px;
+  }
+  
+  .stats__name {
+    font-size: 20px;
+    padding: 8px 13px;
+  }
+  
+  .stats__value {
+    font-size: 24px;
+    padding: 5px;
   }
   
   .main__turn-text {
@@ -678,5 +684,62 @@ body {
 
   .main__play-again-button {
     width: 60%;
+  }
+}
+
+@media screen and (max-height: 374px) {
+  .main__content--menu-page {
+    padding: 25px 0 32px;
+  }
+
+  .main__back-button {
+    font-size: 22px;
+    padding: 4px;
+    margin-bottom: 3px;
+  }
+
+  .main__title {
+    font-size: 36px;
+    padding-bottom: 16px;
+  }
+
+  .main__start-menu {
+    row-gap: 15px;
+  }
+
+  .main__load-game-button,
+  .main__new-game-button {
+    font-size: 30px;
+    padding: 14px;
+  }
+
+  .main__new-game-menu-top {
+    row-gap: 16px;
+    margin-bottom: 18px;
+  }
+
+  .main__one-player-button,
+  .main__two-players-button,
+  .main__game-mode-button {
+    font-size: 22px;
+    padding: 3px;
+  }
+
+  .main__ok-button {
+    font-size: 22px;
+    padding: 3px;
+  }
+
+  .main__first-turn-text {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .main__first-turn-button-x,
+  .main__first-turn-button-o {
+    width: 111px;
+    height: 111px;
+    border-radius: 16px;
+    background-size: 72px;
   }
 }

@@ -12,7 +12,7 @@ const statDraws = document.querySelector('#stat-draws');
 const statWinsO = document.querySelector('#stat-wins-o');
 const statGames = document.querySelector('#stat-games');
 
-const gameSettings = JSON.parse(localStorage.getItem('game settings'));
+const gameSettings = JSON.parse(localStorage.getItem('game_settings'));
 const bot = gameSettings.bot;
 const initialSeconds = (gameSettings.gameMode === 'Normal') ? 5 : 3;
 let firstTurn = gameSettings.firstTurn;
@@ -196,7 +196,7 @@ function saveToLocalStorage() {
   gameSettings.winsO = winsO;
   gameSettings.games = games;
 
-  localStorage.setItem('game settings', JSON.stringify(gameSettings));
+  localStorage.setItem('game_settings', JSON.stringify(gameSettings));
 }
 
 menuBtn.addEventListener('click', () => {

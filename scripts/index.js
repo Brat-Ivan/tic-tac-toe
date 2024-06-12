@@ -13,7 +13,7 @@ const okBtn = document.querySelector('#ok-button');
 const pickFirstTurnBtnX = document.querySelector('#first-turn-button-x');
 const pickFirstTurnBtnO = document.querySelector('#first-turn-button-o');
 
-let gameSettings = (localStorage.getItem('game settings')) ? JSON.parse(localStorage.getItem('game settings')) : {};
+let gameSettings = JSON.parse(localStorage.getItem('game_settings')) || {};
 let bot;
 
 if (!Object.keys(gameSettings).length) {
@@ -56,7 +56,7 @@ function selectNumberOfPlayers() {
 }
 
 gameModeBtn.addEventListener('click', () => {
-  gameModeBtn.textContent = (gameModeBtn.textContent === 'Normal') ? 'Fast' : 'Normal';
+  gameModeBtn.textContent = (gameModeBtn.textContent === 'Fast') ? 'Normal' : 'Fast';
 });
 
 okBtn.addEventListener('click', () => {
@@ -83,7 +83,7 @@ function pickFirstTurn() {
     firstTurn: firstTurn,
   };
 
-  localStorage.setItem('game settings', JSON.stringify(gameSettings));
+  localStorage.setItem('game_settings', JSON.stringify(gameSettings));
   window.location.href = './game.html';
 }
 
